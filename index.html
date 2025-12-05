@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MVA Expert Claim Review - Final</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <script id="LeadiDscript" type="text/javascript">
+        (function() {
+            var s = document.createElement('script');
+            s.id = 'LeadiDscript_CF';
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = '//create.lidstatic.com/callback/custom_endpoint_for_your_domain.js'; // REPLACE with your actual Jornaya Endpoint
+            var ss = document.getElementsByTagName('script')[0];
+            ss.parentNode.insertBefore(s, ss);
+        })();
+    </script>
+    <script type="text/javascript">
+        (function() {
+            var tf = document.createElement('script');
+            tf.type = 'text/javascript';
+            tf.async = true;
+            tf.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://js.trustedform.com/YOUR_TRUSTEDFORM_KEY.js'; // REPLACE with your actual TrustedForm Key/URL
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(tf, s);
+        })();
+    </script>
+    <style>
+        /* --- UNIVERSAL STYLES --- */
+        body { font-family: 'Roboto', sans-serif; margin: 0; padding: 0; background-color: #1a1a1a; color: #ffffff; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        h2 { font-size: 2.5em; font-weight: 700; color: #4CAF50; text-align: center; margin-bottom: 50px; padding-top: 30px; }
+
+        /* --- NAVBAR STYLES --- */
+        .navbar { background-color: #1a1a1a; padding: 15px 40px; border-bottom: 1px solid #333; }
+        .logo-box { display: flex; align-items: center; }
+        .logo-text { font-size: 1.5em; font-weight: 700; color: #ffffff; margin-left: 10px; }
+
+        /* --- HERO SECTION (HEADER) --- */
+        .hero-section {
+            position: relative;
+            height: 700px; 
+            /* PLACEHOLDER: Please replace 'hero-mva-bg.jpg' with your actual image path */
+            background: url('hero-mva-bg.jpg') no-repeat center center/cover; 
+        }
+        .hero-overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.6); }
+        .hero-content { position: relative; display: flex; align-items: center; justify-content: space-between; height: 100%; }
+
+        /* Left Panel */
+        .left-panel { flex: 1.5; max-width: 50%; padding-right: 40px; }
+        .main-headline { font-size: 3.2em; font-weight: 700; line-height: 1.2; margin-bottom: 20px; }
+        .sub-copy { font-size: 1.1em; color: #b0b0b0; margin-bottom: 30px; }
+        .cta-button-large { padding: 15px 30px; background-color: #4CAF50; color: #ffffff; border: none; border-radius: 4px; font-size: 1.2em; font-weight: 700; cursor: pointer; transition: background-color 0.3s; }
+        .cta-button-large:hover { background-color: #45a049; }
+
+        /* Right Panel (Form) */
+        .right-panel { flex: 1; background-color: rgba(36, 36, 36, 0.9); padding: 30px; border-radius: 8px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); max-width: 400px; }
+        .form-title { font-size: 1.4em; font-weight: 700; color: #ffffff; text-align: center; margin-bottom: 20px; padding-top: 0; }
+
+        /* Two-column field layout */
+        .input-group { display: flex; gap: 10px; margin-bottom: 15px; }
+
+        /* Styling for input and select elements (Arrow removed) */
+        .input-group input[type="text"], .input-group input[type="tel"], .input-group input[type="email"], .input-group select {
+            flex: 1; padding: 10px 15px; border: 1px solid #444; border-radius: 4px; background-color: #333333; color: #ffffff; font-size: 0.9em;
+            -webkit-appearance: none; -moz-appearance: none; appearance: none;
+            background-repeat: no-repeat; background-position: right 10px center; background-size: 16px;
+        }
+
+        .input-group input::placeholder { color: #888888; }
+        .disclaimer { font-size: 0.7em; color: #999999; margin-top: 5px; line-height: 1.4; }
+        .cta-button-form { width: 100%; padding: 12px; background-color: #4CAF50; color: #ffffff; border: none; border-radius: 4px; font-size: 1.1em; font-weight: 700; cursor: pointer; transition: background-color 0.3s; margin-top: 15px; }
+        .cta-button-form:hover { background-color: #45a049; }
+        .copyright { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; font-size: 0.7em; color: #999; }
+        .social-icons i { margin-left: 10px; cursor: pointer; transition: color 0.3s; }
+        .social-icons i:hover { color: #4CAF50; }
+
+        /* --- BENEFITS SECTION --- */
+        .benefits-section { padding: 60px 0; background-color: #1a1a1a; border-bottom: 1px solid #333; }
+        .benefits-grid { display: flex; justify-content: space-around; gap: 30px; margin: 0 auto; max-width: 1000px; }
+        .benefit-card { background-color: #242424; padding: 25px; border-radius: 8px; flex: 1; min-height: 150px; text-align: center; border-top: 3px solid #4CAF50; }
+        .icon-box { color: #4CAF50; font-size: 2em; margin-bottom: 15px; }
+        .benefit-card p { color: #b0b0b0; line-height: 1.5; }
+
+        /* --- TESTIMONIALS SECTION --- */
+        .testimonials-section { padding: 60px 0; background-color: #1a1a1a; }
+        .testimonials-grid { display: flex; justify-content: space-around; gap: 30px; margin: 0 auto; max-width: 1200px; }
+        .testimonial-card { background-color: #242424; padding: 25px; border-radius: 8px; flex: 1; text-align: left; border-left: 3px solid #4CAF50; }
+        .icon-quote { color: #4CAF50; font-size: 1.5em; margin-bottom: 10px; }
+        .testimonial-card p { font-style: italic; color: #ffffff; margin-bottom: 10px; }
+        .testimonial-card .source { font-style: normal; font-size: 0.9em; color: #b0b0b0; }
+
+        /* --- RESPONSIVENESS --- */
+        @media (max-width: 1024px) {
+            .hero-content { flex-direction: column; padding-top: 40px; }
+            .left-panel { max-width: 100%; padding-right: 0; text-align: center; margin-bottom: 30px; }
+            .right-panel { max-width: 90%; margin-bottom: 40px; }
+            .main-headline { font-size: 2.5em; }
+            .benefits-grid, .testimonials-grid { flex-direction: column; padding: 0 20px; }
+        }
+    </style>
+    </head>
+<body>
+    
+    <header class="navbar">
+        <div class="logo-box">
+            <i class="fas fa-car-crash fa-lg" style="color: #4CAF50;"></i>
+            <span class="logo-text">MVA Expert Connect</span>
+        </div>
+    </header>
+
+    <div class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content container">
+            
+            <div class="left-panel">
+                <h1 class="main-headline">ACCIDENT? SECURE YOUR RIGHT TO COMPENSATION.</h1>
+                <p class="sub-copy">Don't settle for less. Connect with US Motor Vehicle Accident (MVA) experts instantly. Get a **Free Case Review** and ensure you get the maximum settlement for your injuries and losses.</p>
+                <button class="cta-button-large">START CLAIM NOW</button>
+            </div>
+
+            <div class="right-panel">
+                <h2 class="form-title">SCHEDULE YOUR <span style="color: #4CAF50;">FREE CLAIM REVIEW</span></h2>
+                <form action="https://your-submission-url.com/submit-lead" method="POST" class="claim-form">
+                    
+                    <div class="input-group">
+                        <input type="text" name="first_name" placeholder="First Name *" required>
+                        <input type="text" name="last_name" placeholder="Last Name *" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <input type="tel" name="phone" placeholder="Phone *" required>
+                        <input type="email" name="email" placeholder="Email *" required>
+                    </div>
+
+                    <div class="input-group">
+                        <select name="state" required>
+                            <option value="" disabled selected>Select State *</option>
+                            <option value="AL">Alabama</option>
+                            <option value="AK">Alaska</option>
+                            <option value="AZ">Arizona</option>
+                            <option value="AR">Arkansas</option>
+                            <option value="CA">California</option>
+                            <option value="CO">Colorado</option>
+                            <option value="CT">Connecticut</option>
+                            <option value="DE">Delaware</option>
+                            <option value="DC">District of Columbia</option>
+                            <option value="FL">Florida</option>
+                            <option value="GA">Georgia</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="ID">Idaho</option>
+                            <option value="IL">Illinois</option>
+                            <option value="IN">Indiana</option>
+                            <option value="IA">Iowa</option>
+                            <option value="KS">Kansas</option>
+                            <option value="KY">Kentucky</option>
+                            <option value="LA">Louisiana</option>
+                            <option value="ME">Maine</option>
+                            <option value="MD">Maryland</option>
+                            <option value="MA">Massachusetts</option>
+                            <option value="MI">Michigan</option>
+                            <option value="MN">Minnesota</option>
+                            <option value="MS">Mississippi</option>
+                            <option value="MO">Missouri</option>
+                            <option value="MT">Montana</option>
+                            <option value="NE">Nebraska</option>
+                            <option value="NV">Nevada</option>
+                            <option value="NH">New Hampshire</option>
+                            <option value="NJ">New Jersey</option>
+                            <option value="NM">New Mexico</option>
+                            <option value="NY">New York</option>
+                            <option value="NC">North Carolina</option>
+                            <option value="ND">North Dakota</option>
+                            <option value="OH">Ohio</option>
+                            <option value="OK">Oklahoma</option>
+                            <option value="OR">Oregon</option>
+                            <option value="PA">Pennsylvania</option>
+                            <option value="RI">Rhode Island</option>
+                            <option value="SC">South Carolina</option>
+                            <option value="SD">South Dakota</option>
+                            <option value="TN">Tennessee</option>
+                            <option value="TX">Texas</option>
+                            <option value="UT">Utah</option>
+                            <option value="VT">Vermont</option>
+                            <option value="VA">Virginia</option>
+                            <option value="WA">Washington</option>
+                            <option value="WV">West Virginia</option>
+                            <option value="WI">Wisconsin</option>
+                            <option value="WY">Wyoming</option>
+                        </select>
+                        <input type="text" name="zip_code" placeholder="Zip Code *" required>
+                    </div>
+
+                    <div class="input-group">
+                        <select name="accident_month" required>
+                            <option value="" disabled selected>Accident Month *</option>
+                            <option value="01">January</option>
+                            <option value="02">February</option>
+                            <option value="03">March</option>
+                            <option value="04">April</option>
+                            <option value="05">May</option>
+                            <option value="06">June</option>
+                            <option value="07">July</option>
+                            <option value="08">August</option>
+                            <option value="09">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                        
+                        <select name="accident_year" required>
+                            <option value="" disabled selected>Accident Year *</option>
+                            <option value="2026">2026</option>
+                            <option value="2025">2025</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                        </select>
+                    </div>
+
+                    <input type="hidden" name="ip_address" id="ip_address"> 
+                    <input type="hidden" name="trusted_form_id" id="trusted_form_cert">
+                    <input type="hidden" name="jornaya_lead_id" id="leadiid">
+                    <p class="disclaimer">
+                        By submitting this form, you agree to receive communications from our MVA partners. Standard rates may apply.
+                    </p>
+
+                    <button type="submit" class="cta-button-form">GET MY FREE CLAIM REVIEW</button>
+                </form>
+                <div class="copyright">
+                    <p>© 2024 MVA Expert Connect. All rights reserved.</p>
+                    <div class="social-icons">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="benefits-section">
+        <h2>How We Can Help You</h2>
+        <div class="benefits-grid">
+            
+            <div class="benefit-card">
+                <div class="icon-box"><i class="fas fa-briefcase-medical"></i></div>
+                <p><strong>Medical & Therapy:</strong> Connect with top medical providers first.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <div class="icon-box"><i class="fas fa-balance-scale"></i></div>
+                <p>We fight to get you full medical bills, lost wages, and pain compensation.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="icon-box"><i class="fas fa-clock"></i></div>
+                <p><strong>Expert Legal Network:</strong> Connect with top-rated legal experts quickly.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials-section">
+        <h2>Testimonial Clients Say</h2>
+        <div class="testimonials-grid">
+            
+            <div class="testimonial-card">
+                <div class="icon-quote"><i class="fas fa-quote-left"></i></div>
+                <p>'I was so lost after the accident. These guys helped every step of the way! I never thought possible!'</p>
+                <p class="source">- Sarah K, California</p>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="icon-quote"><i class="fas fa-quote-left"></i></div>
+                <p>Fast, reliable, and professional. Connected with me great legal experts quickly.</p>
+                <p class="source">- Sarah K, California</p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="icon-quote"><i class="fas fa-quote-left"></i></div>
+                <p>They connected me with the best physical therapist and legal counsel quickly.</p>
+                <p class="source">- John R, Texas</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // IP Address Script: Fetches and fills the IP address field
+        fetch('https://api.ipify.org?format=json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('ip_address').value = data.ip;
+            })
+            .catch(error => console.warn('Could not fetch IP address:', error));
+    </script>
+    </body>
+</html>
